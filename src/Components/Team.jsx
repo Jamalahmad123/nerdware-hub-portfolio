@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-// import { TeamMembers } from "../assets";
+import { team } from "../Data/constant";
 import {
   FaFacebook,
   FaTwitter,
@@ -11,7 +11,6 @@ import {
 
 const Team = () => {
   const [width, setWidth] = useState(0);
-  const [position, setPosition] = useState(0);
   const caresoual = useRef();
 
   useEffect(() => {
@@ -36,14 +35,14 @@ const Team = () => {
             dragConstraints={{ right: 0, left: -width }}
             className="flex gap-8"
           >
-            {TeamMembers.map((member, i) => (
+            {team.map((member, i) => (
               <motion.div
                 className="group min-h-[15rem] min-w-[15rem]  md:min-w-[20rem] relative rounded-md overflow-hidden group-hover:scale-105"
                 key={i}
                 animate={{ left: 0 }}
               >
                 <img
-                  src={member}
+                  src={member.image}
                   alt="Person"
                   className="w-full h-full object-cover pointer-events-none"
                 />
@@ -61,18 +60,6 @@ const Team = () => {
               </motion.div>
             ))}
           </motion.div>
-          <button
-            className="absolute bg-white left-0 top-1/2 p-2 rounded-full -translate-y-1/2 text-primary z-50"
-            onClick={onLeft}
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            className="absolute bg-white right-0 top-1/2 p-2 rounded-full -translate-y-1/2 text-primary z-50"
-            onClick={onRight}
-          >
-            <FaArrowRight />
-          </button>
         </motion.div>
       </div>
     </section>
