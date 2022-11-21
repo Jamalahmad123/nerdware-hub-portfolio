@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { team } from "../Data/constant";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaArrowLeft,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Team = () => {
   const [width, setWidth] = useState(0);
@@ -37,7 +31,7 @@ const Team = () => {
           >
             {team.map((member, i) => (
               <motion.div
-                className="group min-h-[15rem] min-w-[15rem]  md:min-w-[20rem] relative rounded-md overflow-hidden group-hover:scale-105"
+                className="group min-h-[15rem] min-w-[15rem]  md:min-w-[20rem] relative rounded-md overflow-hidden group-hover:scale-105 employe-top"
                 key={i}
                 animate={{ left: 0 }}
               >
@@ -46,16 +40,28 @@ const Team = () => {
                   alt="Person"
                   className="w-full h-full object-cover pointer-events-none"
                 />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center gap-2">
-                  <a href="#" className="text-secondary opacity-0 invisible">
-                    <FaFacebook size={25} />
-                  </a>
-                  <a href="#" className="text-secondary opacity-0 invisible">
-                    <FaTwitter size={25} />
-                  </a>
-                  <a href="#" className="text-secondary opacity-0 invisible">
-                    <FaLinkedin size={25} />
-                  </a>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full space-y-6">
+                  <div className="text-center role">
+                    <h2 className="text-white text-2xl font-bold">
+                      {member.name}
+                    </h2>
+
+                    <p className="text-gray-100 font-semibold text-lg">
+                      {member.title}
+                    </p>
+                  </div>
+                  <div className="flex justify-center items-center gap-4">
+                    {member.socialLinks.map((link) => (
+                      <a
+                        href={link.link}
+                        className="text-primary bg-white p-2 rounded-md"
+                        key={link.id}
+                        target="_blank"
+                      >
+                        <link.Icon size={20} />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

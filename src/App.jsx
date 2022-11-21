@@ -18,8 +18,7 @@ function App() {
       <Services />
       <Projects />
       <WorkPlace />
-      {/* <TeamMem /> */}
-      <Team />
+      <TeamMem />
       <Cta />
       <Footer />
     </>
