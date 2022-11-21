@@ -6,7 +6,6 @@ import Cta from "./Components/Cta";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import WorkPlace from "./Components/WorkPlace";
-import Team from "./Components/Team";
 import TeamMem from "./Components/TeamMem";
 
 function App() {
@@ -18,8 +17,7 @@ function App() {
       <Services />
       <Projects />
       <WorkPlace />
-      {/* <TeamMem /> */}
-      <Team />
+      <TeamMem />
       <Cta />
       <Footer />
     </>
