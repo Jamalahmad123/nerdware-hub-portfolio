@@ -29,40 +29,43 @@ const Team = () => {
             dragConstraints={{ right: 0, left: -width }}
             className="flex gap-8"
           >
-            {team.map((member, i) => (
+            {team.map((person, i) => (
               <motion.div
-                className="group min-h-[15rem] min-w-[15rem]  md:min-w-[20rem] relative rounded-md overflow-hidden group-hover:scale-105 employe-top"
+                className="group max-h-[25rem] min-w-[15rem]  md:min-w-[20rem] relative rounded-md overflow-hidden group-hover:scale-105 employe-top"
                 key={i}
                 animate={{ left: 0 }}
               >
-                <img
-                  src={member.image}
-                  alt="Person"
-                  className="w-full h-full object-cover pointer-events-none"
-                />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full space-y-6">
-                  <div className="text-center role">
-                    <h2 className="text-white text-2xl font-bold">
-                      {member.name}
-                    </h2>
+                <motion.div className="relative overflow-hidden rounded-md employe z-0 w-full h-full">
+                  <img
+                    src={person.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
 
-                    <p className="text-gray-100 font-semibold text-lg">
-                      {member.title}
-                    </p>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full space-y-6">
+                    <div className="text-center role">
+                      <h2 className="text-white text-2xl font-bold">
+                        {person.name}
+                      </h2>
+
+                      <p className="text-gray-100 font-semibold text-lg">
+                        {person.title}
+                      </p>
+                    </div>
+                    <div className="flex justify-center items-center gap-4">
+                      {person.socialLinks.map((link) => (
+                        <a
+                          href={link.link}
+                          className="text-primary bg-white p-2 rounded-md"
+                          key={link.id}
+                          target="_blank"
+                        >
+                          <link.Icon size={20} />
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex justify-center items-center gap-4">
-                    {member.socialLinks.map((link) => (
-                      <a
-                        href={link.link}
-                        className="text-primary bg-white p-2 rounded-md"
-                        key={link.id}
-                        target="_blank"
-                      >
-                        <link.Icon size={20} />
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>
