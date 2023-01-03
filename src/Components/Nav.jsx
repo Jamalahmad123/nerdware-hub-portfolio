@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { menu, close, logo } from "../assets/index";
 import { navLinks } from "../Data/constant";
+import Wrapper from "./shared/Wrapper";
+import { commonStyles } from "../Styles";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -11,11 +13,11 @@ const Nav = () => {
 
   return (
     <nav className="navbar flex justify-between items-center py-6">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <Wrapper className={`${commonStyles.flexBetween}`}>
         <h1 className="font-bold text-white">Nerdware Hub</h1>
         <div className="hidden md:flex items-center gap-6 text-white">
           {navLinks.map((item) => (
-            <a href="#" key={item.id}>
+            <a href={`#${item.link}`} key={item.id} className="capitalize">
               {item.link}
             </a>
           ))}
@@ -41,7 +43,7 @@ const Nav = () => {
             ))}
           </div>
         </aside>
-      </div>
+      </Wrapper>
     </nav>
   );
 };

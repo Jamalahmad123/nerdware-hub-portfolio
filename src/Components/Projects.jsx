@@ -20,23 +20,23 @@ const Projects = () => {
   }
 
   return (
-    <section className="py-12">
+    <section id="projects" className="py-12">
       <div className="container mx-auto px-4 space-y-10 relative">
         <div className="flex items-start flex-col justify-start gap-4 lg:gap-0 lg:flex-row lg:justify-between">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
+          <h2 className="capitalize text-3xl font-bold text-white md:text-4xl">
             latest projects
           </h2>
           {/* <div className="absolute left-0 bottom-0 w-36 h-36 z-0 opacity-70 bg__shape" /> */}
           <div className="flex justify-between items-center w-full lg:w-auto lg:gap-8">
             <div>
               <h3 className="text-secondary font-semibold text-xl lg:text-2xl ">
-                3,500+
+                350+
               </h3>
               <p className="font-normal text-dimWhite">Projects Delivered</p>
             </div>
             <div>
               <h3 className="text-secondary font-semibold text-xl lg:text-2xl ">
-                240+
+                330
               </h3>
               <p className="font-normal text-dimWhite">Happy Clients</p>
             </div>

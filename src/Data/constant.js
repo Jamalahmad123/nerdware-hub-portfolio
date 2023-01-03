@@ -12,23 +12,23 @@ import {
 export const navLinks = [
   {
     id: 1,
-    link: "Home",
+    link: "home",
   },
   {
     id: 2,
-    link: "About",
+    link: "about",
   },
   {
     id: 3,
-    link: "Services",
+    link: "services",
   },
   {
     id: 4,
-    link: "Projects",
+    link: "projects",
   },
   {
     id: 5,
-    link: "Contact",
+    link: "contact",
   },
 ];
 
@@ -59,22 +59,45 @@ export const features = [
   },
 ];
 
+`
+SEO
+Graphic Designing
+UI UX
+
+Animation`;
+
 export const homeServices = [
   {
     id: 1,
-    title: "E-Commerce Development",
+    title: "Web Application Dev",
   },
   {
     id: 2,
-    title: "web design",
+    title: "E-commerce Dev",
   },
   {
     id: 3,
-    title: "search engine optimization",
+    title: "Mobile Application Dev",
   },
   {
     id: 4,
+    title: "Desktop Application Dev",
+  },
+  {
+    id: 5,
+    title: "WordPress Website Dev",
+  },
+  {
+    id: 6,
     title: "UI / UX design",
+  },
+  {
+    id: 7,
+    title: "Search Engine Optimization",
+  },
+  {
+    id: 8,
+    title: "Video Editing",
   },
 ];
 
@@ -94,15 +117,15 @@ import {
 export const projects = [
   {
     id: 1,
-    title: "My Flight",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus nisi accusamus nostrum reprehenderit quisquam.",
+    title: "Fashion App",
+    desc: "Nerdware Hub created a Fashion App that will be hosted worldwide, where all the fashion designers can upload their portfolio, actors and models can create their profiles and apply to jobs from directors and a lot more...",
     link: "#",
     image: socialApp,
   },
   {
     id: 2,
-    title: "Real Estate",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus nisi accusamus nostrum reprehenderit quisquam.",
+    title: "Career Development",
+    desc: "In a most of the countries around the world, career counseling and unemployment is a major issue...",
     link: "#",
     image: career,
   },
@@ -264,7 +287,18 @@ export const team = [
   },
 ];
 
-import { android, react, flutter, figma, nodeJs, aws, python, kotlin, googleCloud, firebase } from "../assets/index";
+import {
+  android,
+  react,
+  flutter,
+  figma,
+  nodeJs,
+  aws,
+  python,
+  kotlin,
+  googleCloud,
+  firebase,
+} from "../assets/index";
 
 export const technologies = [
   android,

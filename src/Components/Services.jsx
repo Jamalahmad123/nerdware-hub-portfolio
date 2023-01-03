@@ -4,17 +4,14 @@ import { homeServices } from "../Data/constant";
 
 const Services = () => {
   return (
-    <section className="py-12">
+    <section id="services" className="py-12">
       <div className="container mx-auto flex flex-col items-center justify-center gap-6 px-4 lg:flex-row lg:gap-0">
         <div className="flex-1">
           <header>
             <h2 className="text-3xl font-bold text-white capitalize md:text-4xl">
               creative <span className="text-gradient">website solution</span>
             </h2>
-            <p className="font-normal text-dimWhite text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-              autem.
-            </p>
+            <p className="mt-6 font-normal text-dimWhite text-lg"></p>
           </header>
           <div className="mt-6 flex items-center flex-wrap gap-4 w-full">
             {homeServices.map((service) => (
