@@ -27,12 +27,12 @@ const WorkPlace = () => {
           <h2 className="text-2xl text-white text-center font-bold md:text-3xl">
             Our Workplace Technologies
           </h2>
-          <p className="font-normal text-dimWhite text-lg max-w-2xl mx-auto">
+          {/* <p className="font-normal text-dimWhite text-lg max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Perspiciatis consequuntur ad, cum eos architecto animi? Consectetur,
             ut distinctio rerum cumque labore in fuga at modi odit omnis nisi,
             nostrum magni.
-          </p>
+          </p> */}
         </div>
         {/* slider */}
         <div className="relative overflow-hidden py-12 flex justify-start items-center">
