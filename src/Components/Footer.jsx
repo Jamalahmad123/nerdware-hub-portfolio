@@ -7,8 +7,11 @@ const Footer = () => {
       <div className="container mx-auto p-6">
         <div className="flex justify-center flex-col gap-10 md:justify-between lg:flex-row lg:gap-20">
           <div className="space-y-3 flex items-center flex-col justify-center md:items-start md:justify-start flex-1">
-            <FaHashtag color="#fff" size={30} />
-            <p className="font-normal text-dimWhite text-lg text-center md:text-left">
+            {/* <FaHashtag color="#fff" size={30} /> */}
+            <h3 className="text-white text-xl font-semibold">
+              <span className="text-orange-500">{`</>`}</span> Nerdware Hub
+            </h3>
+            <p className="font-normal text-dimWhite text-center md:text-left">
               Overall, our goal is to help our clients succeed in the digital
               world by providing them with the tools and support they need to
               thrive.

@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { FaBrain, FaRegLightbulb } from "react-icons/fa";
 import { menu, close, logo } from "../assets/index";
 import { navLinks } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
 import { commonStyles } from "../Styles";
+// import logo from "../assets/logo.png";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,7 +16,9 @@ const Nav = () => {
   return (
     <nav className="navbar flex justify-between items-center py-6">
       <Wrapper className={`${commonStyles.flexBetween}`}>
-        <h1 className="font-bold text-white">Nerdware Hub</h1>
+        <h3 className="text-dimWhite text-lg font-semibold">
+          <span className="text-orange-500">{`</>`}</span> NH
+        </h3>
         <div className="hidden md:flex items-center gap-6 text-white">
           {navLinks.map((item) => (
             <a href={`#${item.link}`} key={item.id} className="capitalize">

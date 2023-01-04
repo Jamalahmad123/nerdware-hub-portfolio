@@ -124,26 +124,26 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Career Development",
-    desc: "In a most of the countries around the world, career counseling and unemployment is a major issue...",
+    title: "Career Dev Web",
+    desc: "Career Development Buddy is a user-friendly application built both for Mobile and Web, users can find and apply onto jobs of they fit best with, via this platform.",
     link: "#",
     image: career,
   },
   {
     id: 3,
-    title: "Modern UI",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus nisi accusamus nostrum reprehenderit quisquam.",
+    title: "Career Dev Mob",
+    desc: "Career Development Buddy is a user-friendly application built both for Mobile and Web, users can find and apply onto jobs of they fit best with, via this platform.",
     link: "#",
     image: sample,
   },
 
-  {
-    id: 4,
-    title: "Hoo Bank",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus nisi accusamus nostrum reprehenderit quisquam.",
-    link: "#",
-    image: screen1,
-  },
+  // {
+  //   id: 4,
+  //   title: "Hoo Bank",
+  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus nisi accusamus nostrum reprehenderit quisquam.",
+  //   link: "#",
+  //   image: screen1,
+  // },
 ];
 
 export const team = [
