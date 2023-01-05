@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="py-12 bg-black-gradient-2">
       <a
-        href="https://wa.me/3484162098"
+        href="https://wa.me/+923176440066"
         className="fixed right-6 bottom-10 text-2xl text-green-600 z-[9999] p-1 bg-white shadow-md rounded-md"
         target="_blank"
         rel="noopener noreferrer"
