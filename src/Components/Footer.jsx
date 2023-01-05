@@ -1,9 +1,17 @@
 import React from "react";
-import { FaHashtag } from "react-icons/fa";
+import { FaHashtag, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="py-12 bg-black-gradient-2">
+      <a
+        href="https://wa.me/3484162098"
+        className="fixed right-6 bottom-10 text-2xl text-green-600 z-[9999] p-1 bg-white shadow-md rounded-md"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp />
+      </a>
       <div className="container mx-auto p-6">
         <div className="flex justify-center flex-col gap-10 md:justify-between lg:flex-row lg:gap-20">
           <div className="space-y-3 flex items-center flex-col justify-center md:items-start md:justify-start flex-1">

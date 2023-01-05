@@ -70,22 +70,27 @@ export const homeServices = [
   {
     id: 1,
     title: "Web Application Dev",
+    titleComp: "Website Application Development",
   },
   {
     id: 2,
     title: "E-commerce Dev",
+    titleComp: "E-commerce Development",
   },
   {
     id: 3,
     title: "Mobile Application Dev",
+    titleComp: "Mobile Application Development",
   },
   {
     id: 4,
     title: "Desktop Application Dev",
+    titleComp: "Desktop Application Development",
   },
   {
     id: 5,
     title: "WordPress Website Dev",
+    titleComp: "WordPress Website Development",
   },
   {
     id: 6,

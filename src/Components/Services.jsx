@@ -15,7 +15,7 @@ const Services = () => {
           </header>
           <div className="mt-6 flex items-center flex-wrap gap-4 w-full">
             {homeServices.map((service) => (
-              <ServicesCards title={service.title} key={service.id} />
+              <ServicesCards service={service} key={service.id} />
             ))}
           </div>
         </div>

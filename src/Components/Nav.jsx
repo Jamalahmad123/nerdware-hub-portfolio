@@ -41,7 +41,7 @@ const Nav = () => {
             } text-white flex-col justify-center items-center gap-4 bg-black-gradient py-6 absolute top-14 mx-4 my-2 rounded-xl min-w-[200px] z-50 sidebar`}
           >
             {navLinks.map((item) => (
-              <a href="#" key={item.id}>
+              <a href={`#${item.link}`} key={item.id}>
                 {item.link}
               </a>
             ))}

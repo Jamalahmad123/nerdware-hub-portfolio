@@ -13,7 +13,7 @@ const Cta = () => {
           </div>
           <div>
             <Button styles="text-gray-800 bg-white rounded-full">
-              <a href="mailto:nerdwarehub@gmail.com">get started</a>
+              <a href="mailto:Info@nerdwarehub.com">get started</a>
             </Button>
           </div>
         </div>
