@@ -1,25 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Nav from "./Components/Nav";
-import Hero from "./Components/Hero";
-import BussinesHelp from "./Components/BussinesHelp";
-import Services from "./Components/Services";
-import Cta from "./Components/Cta";
-import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
-import WorkPlace from "./Components/WorkPlace";
-import TeamMem from "./Components/TeamMem";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Hero />
-      <BussinesHelp />
-      <Services />
-      <Projects />
-      <WorkPlace />
-      <TeamMem />
-      <Cta />
-      <Footer />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

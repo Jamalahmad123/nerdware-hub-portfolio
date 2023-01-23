@@ -6,13 +6,14 @@ module.exports = {
     screens: {
       sm: "480px",
       md: "768px",
-      lg: "976px",
+      lg: "1100px",
       xl: "1440px",
     },
     extend: {
       colors: {
         primary: "#00040f",
         secondary: "#00f6ff",
+        tertiary: "#33bbcf",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
         dimGray: "#191919",

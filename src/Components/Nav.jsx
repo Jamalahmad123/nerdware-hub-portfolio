@@ -1,10 +1,9 @@
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { FaBrain, FaRegLightbulb } from "react-icons/fa";
-import { menu, close, logo } from "../assets/index";
+import { menu, close } from "../assets/index";
 import { navLinks } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
 import { commonStyles } from "../Styles";
-// import logo from "../assets/logo.png";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,16 +13,22 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar flex justify-between items-center py-6">
+    <nav className={`navbar ${commonStyles.flexBetween} py-6`}>
       <Wrapper className={`${commonStyles.flexBetween}`}>
-        <h3 className="text-dimWhite text-lg font-semibold">
-          <span className="text-orange-500">{`</>`}</span> NH
-        </h3>
+        <Link to="/">
+          <h3 className="text-dimWhite text-lg font-semibold">
+            <span className="text-orange-500">{`</>`}</span> NH
+          </h3>
+        </Link>
         <div className="hidden md:flex items-center gap-6 text-white">
           {navLinks.map((item) => (
-            <a href={`#${item.link}`} key={item.id} className="capitalize">
-              {item.link}
-            </a>
+            <NavLink
+              to={`${item.link}`}
+              key={item.id}
+              className="capitalize font-semibold text-lg nav-link border-none outline-none"
+            >
+              {item.name}
+            </NavLink>
           ))}
         </div>
 
@@ -41,9 +46,13 @@ const Nav = () => {
             } text-white flex-col justify-center items-center gap-4 bg-black-gradient py-6 absolute top-14 mx-4 my-2 rounded-xl min-w-[200px] z-50 sidebar`}
           >
             {navLinks.map((item) => (
-              <a href={`#${item.link}`} key={item.id}>
-                {item.link}
-              </a>
+              <NavLink
+                to={`${item.link}`}
+                key={item.id}
+                className="capitalize font text-lg nav-link"
+              >
+                {item.name}
+              </NavLink>
             ))}
           </div>
         </aside>

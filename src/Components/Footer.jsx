@@ -1,21 +1,21 @@
 import React from "react";
-import { FaHashtag, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import Wrapper from "./shared/Wrapper";
 
 const Footer = () => {
   return (
     <footer className="py-12 bg-black-gradient-2">
       <a
         href="https://wa.me/+923176440066"
-        className="fixed right-6 bottom-10 text-2xl text-green-600 z-[9999] p-1 bg-white shadow-md rounded-md"
+        className="fixed right-6 bottom-10 text-2xl text-green-600 z-[9999] p-2 bg-white shadow-md rounded-[50%]"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaWhatsapp />
       </a>
-      <div className="container mx-auto p-6">
+      <Wrapper>
         <div className="flex justify-center flex-col gap-10 md:justify-between lg:flex-row lg:gap-20">
           <div className="space-y-3 flex items-center flex-col justify-center md:items-start md:justify-start flex-1">
-            {/* <FaHashtag color="#fff" size={30} /> */}
             <h3 className="text-white text-xl font-semibold">
               <span className="text-orange-500">{`</>`}</span> Nerdware Hub
             </h3>
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Wrapper>
     </footer>
   );
 };

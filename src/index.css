@@ -6,6 +6,15 @@
   html {
     font-family: "Poppins", system-ui, sans-serif;
   }
+  section {
+    @apply py-16;
+  }
+  h1 {
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
 }
 
 :root {
@@ -20,6 +29,24 @@
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Links hover Effect */
+.nav-link {
+  box-shadow: inset 0 0 0 0 #33bbcf;
+  color: #33bbcf;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #11101d;
+  box-shadow: inset 200px 0 0 0 #33bbcf;
+}
+
+.active {
+  color: #11101d;
+  box-shadow: inset 200px 0 0 0 #33bbcf;
 }
 
 .text-gradient {
@@ -82,6 +109,10 @@
 
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.smooth {
+  transition: all 0.5s ease;
 }
 
 .sidebar {
@@ -220,7 +251,125 @@
   transition: all 0.5s ease;
 }
 
-.bg__shape {
+.dash-before::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 1px;
+  background-color: #ff5723;
+}
+
+/* Team Member */
+.team-member-inner {
+  clip-path: circle(35% at 50% 38%);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.team-member-container:hover .team-member-inner {
+  clip-path: circle(100% at 50% 38%);
+}
+
+.team-member-container:hover h3,
+.team-member-container:hover p {
+  color: #fff;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    360deg,
+    rgb(0 0 0/78%) 0%,
+    rgb(0 0 0/0%) 50%
+  );
+}
+
+/* Contact */
+.bg-contact {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/contact-us.jpg");
+}
+
+/* BG Project */
+.bg-project {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("/project-hero.jpg");
+}
+
+/* BG Services */
+.bg-service {
+  background-image: linear-gradient(90deg, #1d2671 30%, rgb(14 14 14/50%) 90%),
+    url("/service-hero.jpg");
+}
+
+.service-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 68px;
+  background-color: #fff;
+}
+
+.service-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 68px;
+  background-color: #fff;
+}
+
+.service-content h1::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 11rem;
+  height: 1px;
+  transition: all 0.5s ease;
+}
+
+/* .service-content:hover h1::after {
+  width: 11rem;
+} */
+
+/* Shapes */
+
+.bg__shape--square {
   background: radial-gradient(#214d76 2px, transparent 2px);
   background-size: 16px 16px;
+}
+
+.bg__shape--circle {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    rgba(255, 255, 255, 0) 0.8px,
+    #ff5723 1.6px,
+    #ff5723 3px,
+    rgba(255, 255, 255, 0) 3.8px,
+    rgb(255 0 0/0%) 10px
+  );
+  border-radius: 100px;
 }

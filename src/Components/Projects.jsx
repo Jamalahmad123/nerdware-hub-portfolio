@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { projects } from "../Data/constant";
 import Button from "./shared/Button";
+import { Link } from "react-router-dom";
+import Wrapper from "./shared/Wrapper";
 
 const Projects = () => {
   const [current, setCurrent] = useState(0);
@@ -20,8 +22,8 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-12">
-      <div className="container mx-auto px-4 space-y-10 relative">
+    <section>
+      <Wrapper className="space-y-10 relative">
         <div className="flex items-start flex-col justify-start gap-4 lg:gap-0 lg:flex-row lg:justify-between">
           <h2 className="capitalize text-3xl font-bold text-white md:text-4xl">
             latest projects
@@ -97,7 +99,13 @@ const Projects = () => {
         >
           <FaArrowLeft />
         </button>
-      </div>
+        <Link
+          to="/projects"
+          className="absolute right-4 -bottom-8 text-white transition-all hover:border-b hover:border-secondary"
+        >
+          View More
+        </Link>
+      </Wrapper>
     </section>
   );
 };

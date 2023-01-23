@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Wrapper from "./shared/Wrapper";
 
 const Clients = () => {
   const [current, setCurrent] = useState(0);
@@ -15,8 +16,8 @@ const Clients = () => {
     }
   }
   return (
-    <section className="py-12">
-      <div className="container mx-auto px-4">
+    <section>
+      <Wrapper>
         <header className="text-center">
           <h2 className="text-3xl text-white md:text-4xl">Our Client Say</h2>
         </header>
@@ -35,7 +36,7 @@ const Clients = () => {
         >
           <FaArrowLeft />
         </button> */}
-      </div>
+      </Wrapper>
     </section>
   );
 };

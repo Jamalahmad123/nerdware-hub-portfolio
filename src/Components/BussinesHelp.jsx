@@ -1,5 +1,7 @@
+import BtnLink from "./shared/BtnLink";
 import { features } from "../Data/constant";
-import Button from "./shared/Button";
+import { Link } from "react-router-dom";
+import Wrapper from "./shared/Wrapper";
 
 const BusinessCard = ({ title, content, Icon, iconStyle }) => (
   <div
@@ -14,15 +16,11 @@ const BusinessCard = ({ title, content, Icon, iconStyle }) => (
 );
 
 const BussinesHelp = () => {
-  const scrollToView = () => {
-    const element = document.getElementById("contact");
-    if (element) element.scrollIntoView({ behavior: "smooth" });
-  };
   return (
-    <section id="about" className="py-12">
-      <div className="container mx-auto px-4 flex flex-col justify-center gap-10 lg:flex-row">
+    <section>
+      <Wrapper className="flex flex-col justify-center gap-16 md:gap-10 lg:flex-row">
         <div className="space-y-4 flex-1">
-          <h2 className="text-3xl font-bold text-gradient md:text-4xl">
+          <h2 className="text-gradient">
             How can we help <br className="hidden md:block" /> your Business ?
           </h2>
           <p className="font-normal text-dimWhite text-lg max-w-md">
@@ -32,16 +30,19 @@ const BussinesHelp = () => {
             ensure that our products meet the highest standards, we have a
             rigorous testing and quality assurance process in place.
           </p>
-          <Button onClick={scrollToView} styles="bg-blue-gradient rounded-md">
-            Get Started
-          </Button>
+          <BtnLink
+            styles="bg-blue-gradient rounded-md inline-block"
+            path="/about"
+          >
+            Learn More
+          </BtnLink>
         </div>
         <div className="grid grid-cols-1 flex-1 md:grid-cols-2 gap-6 md:gap-4 lg:gap-6">
           {features.map((feature) => (
             <BusinessCard key={feature.id} {...feature} />
           ))}
         </div>
-      </div>
+      </Wrapper>
     </section>
   );
 };

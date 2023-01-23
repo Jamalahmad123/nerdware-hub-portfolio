@@ -1,11 +1,15 @@
 import { services } from "../assets/index";
 import ServicesCards from "./shared/ServicesCards";
 import { homeServices } from "../Data/constant";
+import Wrapper from "./shared/Wrapper";
+import { commonStyles } from "../Styles";
 
 const Services = () => {
   return (
-    <section id="services" className="py-12">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-6 px-4 lg:flex-row lg:gap-0">
+    <section>
+      <Wrapper
+        className={`${commonStyles.flexCenter} flex-col gap-6 lg:flex-row lg:gap-0`}
+      >
         <div className="flex-1">
           <header>
             <h2 className="text-3xl font-bold text-white capitalize md:text-4xl">
@@ -28,7 +32,7 @@ const Services = () => {
           {/* <div className="absolute -left-1/2 top-0 w-1/2 h-1/2 z-[3] rounded-full white__gradient" />
           <div className="absolute -left-1/2 bottom-0 w-1/2 h-1/2 z-0 rounded-full pink__gradient" /> */}
         </div>
-      </div>
+      </Wrapper>
     </section>
   );
 };

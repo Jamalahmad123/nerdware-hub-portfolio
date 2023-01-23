@@ -12,23 +12,28 @@ import {
 export const navLinks = [
   {
     id: 1,
-    link: "home",
+    link: "/",
+    name: "Home",
   },
   {
     id: 2,
-    link: "about",
+    link: "/about",
+    name: "About",
   },
   {
     id: 3,
-    link: "services",
+    link: "/services",
+    name: "Services",
   },
   {
     id: 4,
-    link: "projects",
+    link: "/projects",
+    name: "Projects",
   },
   {
     id: 5,
-    link: "contact",
+    link: "/contact",
+    name: "Contact",
   },
 ];
 
@@ -124,6 +129,7 @@ export const projects = [
     id: 1,
     title: "Fashion App",
     desc: "Nerdware Hub created a Fashion App that will be hosted worldwide, where all the fashion designers can upload their portfolio, actors and models can create their profiles and apply to jobs from directors and a lot more...",
+    tech: "Flutter App Development",
     link: "#",
     image: socialApp,
   },
@@ -131,13 +137,16 @@ export const projects = [
     id: 2,
     title: "Career Dev Web",
     desc: "Career Development Buddy is a user-friendly application built both for Mobile and Web, users can find and apply onto jobs of they fit best with, via this platform.",
+    tech: "react web development",
     link: "#",
+    style: "col-span-2 row-span-2",
     image: career,
   },
   {
     id: 3,
     title: "Career Dev Mob",
     desc: "Career Development Buddy is a user-friendly application built both for Mobile and Web, users can find and apply onto jobs of they fit best with, via this platform.",
+    tech: "react web development",
     link: "#",
     image: sample,
   },

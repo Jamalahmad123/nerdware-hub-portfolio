@@ -1,17 +1,15 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
 import { team } from "../Data/constant";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import Wrapper from "./shared/Wrapper";
 
 const TeamMem = () => {
   return (
-    <section className="py-12">
-      <div className="container mx-auto px-4 relative space-y-12">
+    <section>
+      <Wrapper className="relative space-y-12">
         <h2 className="text-2xl font-bold text-center text-white capitalize md:text-3xl">
           Team Members
         </h2>
@@ -40,7 +38,7 @@ const TeamMem = () => {
               <div className="overflow-hidden rounded-md employe relative">
                 <img
                   src={person.image}
-                  alt=""
+                  alt="team member image"
                   className="w-full object-cover h-[450px]"
                 />
 
@@ -59,7 +57,7 @@ const TeamMem = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </Wrapper>
     </section>
   );
 };

@@ -1,75 +1,56 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useState, useRef, useEffect } from "react";
 
 import { technologies } from "../Data/constant";
+import Wrapper from "./shared/Wrapper";
 
 const WorkPlace = () => {
-  const [position, setPosition] = useState(0);
+  const [width, setWidth] = useState(0);
+  const carouselRef = useRef();
 
-  function onRight() {
-    if (position < technologies.length - 1) {
-      setPosition(position + 1);
-    }
-  }
-
-  function onLeft() {
-    if (position > 0) {
-      setPosition(position - 1);
-    }
-  }
+  useEffect(() => {
+    setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+  }, []);
 
   return (
-    <section className="py-12 overflow-hidden relative mt-6">
+    <section className="overflow-hidden relative">
       <div className="bg__purple w-[400px] h-[400px] rounded-full absolute left-0 right-0 -top-[200px] mx-auto -z-10" />
-      <div className="container mx-auto px-4 space-y-12">
+      <Wrapper className="space-y-12">
         <div className="space-y-4">
           <h2 className="text-2xl text-white text-center font-bold md:text-3xl">
             Our Workplace Technologies
           </h2>
-          {/* <p className="font-normal text-dimWhite text-lg max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis consequuntur ad, cum eos architecto animi? Consectetur,
-            ut distinctio rerum cumque labore in fuga at modi odit omnis nisi,
-            nostrum magni.
-          </p> */}
+          <p className="font-normal text-dimWhite text-lg max-w-4xl mx-auto text-center">
+            Our Workplace Technologies Center is focused on working with
+            business leaders to help them maximize their productivity, reduce
+            costs and meet social needs in the 21st century. Our Workplace
+            Technologies Center is focused on working with business leaders to
+            help them maximize their productivity, reduce costs and meet social
+            needs in the 21st century.
+          </p>
         </div>
         {/* slider */}
-        <div className="relative overflow-hidden py-12 flex justify-start items-center">
-          {technologies.map((tech, index) => (
-            <motion.div
-              className="absolute h-20 w-20"
-              key={index}
-              initial={{ scale: 0, rotation: -180 }}
-              animate={{
-                scale: 1,
-                rotate: 0,
-                left: `${(index - position) * 150}px`,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-              }}
-            >
-              <img src={tech} alt="" className="w-full h-full" />
-            </motion.div>
-          ))}
-
-          <button
-            className="text-xl text-primary bg-dimWhite absolute top-1/2 left-0 p-2 rounded-full -translate-y-1/2 z-50"
-            onClick={onLeft}
+        <motion.div ref={carouselRef} className="overflow-hidden cursor-grab">
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            className="flex gap-14"
           >
-            <FaArrowLeft />
-          </button>
-          <button
-            className="text-xl text-primary bg-dimWhite absolute top-1/2 right-0 p-2 rounded-full -translate-y-1/2 z-50"
-            onClick={onRight}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-      </div>
+            {technologies.map((tech, index) => (
+              <motion.div
+                className="pointer-events-none min-h-[6rem] min-w-[6rem]"
+                key={index}
+              >
+                <img
+                  src={tech}
+                  alt={tech}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </Wrapper>
     </section>
   );
 };
