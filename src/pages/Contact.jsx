@@ -113,7 +113,7 @@ const Contact = () => {
                   name="terms"
                   className="w-[25px] h-[25px]"
                 />
-                <label htmlFor="terms" className="text-sm">
+                <label htmlFor="terms" className="text-sm text-gray-700">
                   By clicking the “Submit” button you agree to our Terms &
                   Conditions.
                 </label>

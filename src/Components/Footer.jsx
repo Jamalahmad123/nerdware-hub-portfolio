@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { logo } from "../assets";
 import Wrapper from "./shared/Wrapper";
 
 const Footer = () => {
@@ -16,9 +17,10 @@ const Footer = () => {
       <Wrapper>
         <div className="flex justify-center flex-col gap-10 md:justify-between lg:flex-row lg:gap-20">
           <div className="space-y-3 flex items-center flex-col justify-center md:items-start md:justify-start flex-1">
-            <h3 className="text-white text-xl font-semibold">
+            {/* <h3 className="text-white text-xl font-semibold">
               <span className="text-orange-500">{`</>`}</span> Nerdware Hub
-            </h3>
+            </h3> */}
+            <img src={logo} alt="nerdware hub logo" className="w-16" />
             <p className="font-normal text-dimWhite text-center md:text-left">
               Overall, our goal is to help our clients succeed in the digital
               world by providing them with the tools and support they need to

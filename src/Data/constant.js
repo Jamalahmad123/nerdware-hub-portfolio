@@ -122,6 +122,7 @@ import {
   jamal,
   hamza,
   adeel,
+  founderImg,
 } from "../assets/index";
 
 export const projects = [
@@ -182,7 +183,7 @@ export const team = [
         link: "#",
       },
     ],
-    image: adeel,
+    image: founderImg,
   },
   {
     id: 2,
@@ -313,6 +314,24 @@ import {
   googleCloud,
   firebase,
 } from "../assets/index";
+
+export const accodianData = [
+  {
+    id: 1,
+    title: "Why do I need a mobile-friendly website?",
+    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+  },
+  {
+    id: 2,
+    title: "What is the difference between custom and ready-to-use software?",
+    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+  },
+  {
+    id: 3,
+    title: "Which Technology or Tools used for Website Designing?",
+    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+  },
+];
 
 export const technologies = [
   android,

@@ -351,6 +351,10 @@
   transition: all 0.5s ease;
 }
 
+.height__transition {
+  transition: opacity 0.3s ease-out, max-height 0.8s ease-out;
+}
+
 /* .service-content:hover h1::after {
   width: 11rem;
 } */

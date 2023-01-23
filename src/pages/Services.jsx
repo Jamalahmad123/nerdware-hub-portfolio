@@ -1,6 +1,6 @@
 import BtnLink from "../Components/shared/BtnLink";
 import Wrapper from "../Components/shared/Wrapper";
-import { FaAndroid, FaLongArrowAltRight, FaSearchengin } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { commonStyles } from "../Styles";
 import {
   android,
@@ -9,6 +9,7 @@ import {
   copywritingIcon,
   developer1,
   developer2,
+  doubtImg,
   experience,
   investment,
   onlineLearning,
@@ -22,6 +23,7 @@ import {
 import Statistics from "../Components/shared/Statistics";
 import WorkPlace from "../Components/WorkPlace";
 import Cta from "../Components/Cta";
+import AccordianList from "../Components/shared/AccordianList";
 
 const services = [
   {
@@ -114,12 +116,12 @@ const Services = () => {
             <div>
               <h5 className={`${commonStyles.scriptHeading} mb-2`}>Overview</h5>
               <h2 className="text-primary">Web Design Agency</h2>
-              <p className="mt-8 mb-5">
+              <p className="mt-8 mb-5 text-gray-700">
                 Design and development of high-quality web and mobile
                 applications that will help you reach new heights in your
                 business.
               </p>
-              <p>
+              <p className="text-gray-700">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -178,7 +180,7 @@ const Services = () => {
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-primary">{service.desc}</p>
+                <p className="text-gray-700">{service.desc}</p>
               </div>
             ))}
           </div>
@@ -186,7 +188,7 @@ const Services = () => {
       </section>
       {/* Technologies */}
       <WorkPlace />
-      <section className="bg-white overflow-hidden">
+      <section className="bg-[#f6f7ff] overflow-hidden">
         <Wrapper className="flex items-center flex-col gap-20 justify-between lg:flex-row">
           <div className="flex items-center justify-center flex-wrap gap-2 relative flex-1">
             <div className="bg__shape--square absolute -right-[20px] top-4 w-[6rem] h-[6rem] md:w-[9rem] md:h-[9rem] z-0 opacity-70" />
@@ -245,10 +247,29 @@ const Services = () => {
           </div>
         </Wrapper>
       </section>
+      {/* Frequently Ask Questions */}
+      <section className="bg-[#fff]">
+        <Wrapper className="flex flex-col md:flex-row items-center justify-between gap-14">
+          <div className="flex-1 w-full">
+            <img src={doubtImg} alt="have a question banner" />
+          </div>
+          <div className="flex-1">
+            <div>
+              <h5 className={`${commonStyles.scriptHeading} mb-3`}>
+                Have a Doubt?
+              </h5>
+              <h2 className="text-primary">Frequently Asked Question</h2>
+            </div>
+            <AccordianList />
+          </div>
+        </Wrapper>
+      </section>
       {/* CTA */}
-      <Cta />
+      <Cta styles="bg-[#f6f7ff]" />
     </>
   );
 };
 
 export default Services;
+
+//

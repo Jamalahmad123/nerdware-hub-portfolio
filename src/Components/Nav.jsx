@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { menu, close } from "../assets/index";
+import { menu, close, logo } from "../assets/index";
 import { navLinks } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
 import { commonStyles } from "../Styles";
@@ -15,10 +15,11 @@ const Nav = () => {
   return (
     <nav className={`navbar ${commonStyles.flexBetween} py-6`}>
       <Wrapper className={`${commonStyles.flexBetween}`}>
-        <Link to="/">
-          <h3 className="text-dimWhite text-lg font-semibold">
+        <Link to="/" className="w-16">
+          {/* <h3 className="text-dimWhite text-lg font-semibold">
             <span className="text-orange-500">{`</>`}</span> NH
-          </h3>
+          </h3> */}
+          <img src={logo} alt="nerdware hub logo" className="w-full" />
         </Link>
         <div className="hidden md:flex items-center gap-6 text-white">
           {navLinks.map((item) => (

@@ -8,6 +8,7 @@ import {
   adeel,
   jamal,
   team1,
+  founderImg,
 } from "../assets";
 import PageName from "../Components/shared/PageName";
 import Statistics from "../Components/shared/Statistics";
@@ -24,15 +25,18 @@ const About = () => {
             {/* <PageName page="About" /> */}
             <h1 className="text-tertiary">About Us</h1>
             <p className={`${commonStyles.sectionpara} mt-8 mb-4`}>
-              We are a multi-award-winning digital consulting and engineering
-              firm that provides end-to-end software solutions to enterprises,
-              independent software vendors, digital agencies, and startups.
+              Introducing Nerdware Hub, your one-stop-shop for all things
+              digital. We are a newly launched startup with a proven track
+              record of success, having completed 7 projects with 100% client
+              satisfaction. Our team of experts specializes in website and
+              mobile app development, UI/UX design, graphic design, video
+              editing, and animation.
             </p>
             <p className={`${commonStyles.sectionpara}`}>
-              Since our inception in 2008, we have served over 6800 consumers
-              from over 38 countries. Our agile/DevOps development methodology,
-              SLA-driven strategy, and on-time project delivery have earned us a
-              strong reputation among our clients.
+              We understand the importance of creating a visually stunning and
+              user-friendly digital presence for your business. That's why we
+              take the time to understand your needs and tailor our services to
+              help you achieve your goals.
             </p>
           </header>
           <div className={`${commonStyles.flex} gap-4 self-end`}>
@@ -110,7 +114,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
             <figure className="flex-1">
               <img
-                src={adeel}
+                src={founderImg}
                 alt="adeel the founder"
                 className="border-none rounded-xl"
               />

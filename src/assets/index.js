@@ -28,6 +28,7 @@ import aboutHero1 from "./about-hero-1.jpg";
 import aboutHero2 from "./about-hero-2.jpg";
 import officeView from "./about-office-view.jpg";
 import missionAbout from "./mission-team.svg";
+import founderImg from "./founder.png";
 
 // contact us
 
@@ -44,6 +45,7 @@ import experience from "./experience.png";
 import investment from "./investment.png";
 import onTime from "./on-time.png";
 import onlineLearning from "./online-learning.png";
+import doubtImg from "./doubt.svg";
 
 // Team Members
 import asim1 from "./Asim-01.jpg";
@@ -85,6 +87,7 @@ export {
   jamal,
   hamza,
   adeel,
+  founderImg,
   aboutHero1,
   aboutHero2,
   missionAbout,
@@ -100,4 +103,5 @@ export {
   onTime,
   onlineLearning,
   investment,
+  doubtImg,
 };
