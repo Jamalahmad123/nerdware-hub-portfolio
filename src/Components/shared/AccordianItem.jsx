@@ -19,7 +19,7 @@ const AccordianItem = ({ data }) => {
       </div>
       <div
         className={`${
-          showItem ? "max-h-0 opacity-0" : "max-h-fit opacity-100"
+          showItem ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
         } height__transition pl-6`}
       >
         <p className={`text-gray-700 mt-3`}>{data.desc}</p>
