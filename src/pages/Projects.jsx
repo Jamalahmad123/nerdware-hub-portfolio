@@ -2,9 +2,13 @@ import { FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ProjectsGrid from "../Components/ProjectsGrid";
 import Wrapper from "../Components/shared/Wrapper";
+import { useTitle } from "../CustomHooks/CustomHook";
 import { projects } from "../Data/constant";
 
 const Projects = () => {
+
+  useTitle("NerdWareHub Digital Ageny | Projects")
+
   return (
     <>
       <header className={`py-16 bg-center bg-no-repeat bg-cover bg-project`}>

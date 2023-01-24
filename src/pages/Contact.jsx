@@ -2,10 +2,12 @@ import { FaEnvelope, FaPhoneAlt, FaUser, FaCommentAlt } from "react-icons/fa";
 import Button from "../Components/shared/Button";
 import PageName from "../Components/shared/PageName";
 import Wrapper from "../Components/shared/Wrapper";
-import { pageFromStart } from "../CustomHooks/CustomHook";
+import { pageFromStart, useTitle } from "../CustomHooks/CustomHook";
 
 const Contact = () => {
   pageFromStart();
+
+  useTitle("NerdWareHub Digital Ageny | Contact-us");
 
   return (
     <>
@@ -20,11 +22,12 @@ const Contact = () => {
             highest level of service and support. If you have any questions or
             would like to learn more about our services, please don't hesitate
             to contact us. You can reach us by phone, email or through our
-            website contact form. Our customer service team is available to
+            website contact form.
+            {/*  Our customer service team is available to
             answer any questions you may have and provide you with the
             information you need to make an informed decision about our
             services. We look forward to hearing from you and helping you
-            achieve your business goals through our expert digital solutions.
+            achieve your business goals through our expert digital solutions. */}
           </p>
         </Wrapper>
       </header>

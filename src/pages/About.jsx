@@ -13,10 +13,14 @@ import {
 import PageName from "../Components/shared/PageName";
 import Statistics from "../Components/shared/Statistics";
 import Wrapper from "../Components/shared/Wrapper";
+import { useTitle } from "../CustomHooks/CustomHook";
 import { team } from "../Data/constant";
 import { commonStyles } from "../Styles";
 
 const About = () => {
+
+  useTitle("NerdWareHub Digital Ageny | About-us")
+
   return (
     <>
       <header className="py-16">

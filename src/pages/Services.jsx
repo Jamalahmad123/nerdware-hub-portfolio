@@ -24,68 +24,12 @@ import Statistics from "../Components/shared/Statistics";
 import WorkPlace from "../Components/WorkPlace";
 import Cta from "../Components/Cta";
 import AccordianList from "../Components/shared/AccordianList";
-
-const services = [
-  {
-    id: 1,
-    title: "App Development",
-    desc: "We offer both iOS and Android app development services. Our app developers have deep understanding of mobile app development best practices and can help you create a user-friendly and feature-rich app that will help your business reach new heights.",
-    Icon: android,
-  },
-  {
-    id: 2,
-    title: "Web Development",
-    desc: "From custom website design and development to e-commerce platforms and CMS integration, our team of experts has the skills and experience to build a website that not only looks great but also delivers results. Whether you need a simple brochure website or a complex web application, we have the expertise to create a solution that meets your specific needs.",
-    Icon: webIcon,
-  },
-  {
-    id: 3,
-    title: "Digital Marketing",
-    desc: "We provide a wide range of digital marketing services that include SEO, PPC, Social Media, Email marketing, and more. Our experts will help you to reach your target audience and increase conversions, by creating and implementing effective digital marketing strategies.",
-    Icon: seoIcon,
-  },
-  {
-    id: 4,
-    title: "Content Writing",
-    desc: "Our team of experienced writers can create high-quality content that engages your audience, drives traffic to your website and improves your search engine rankings. From blog posts and articles to product descriptions and website copy, we can help you create compelling and informative content that will help your business stand out.",
-    Icon: copywritingIcon,
-  },
-  {
-    id: 5,
-    title: "eCommerce Development",
-    desc: "We offer a range of ecommerce services that include platform selection, customization, payment gateway integration, and more. Whether you're just getting started or looking to take your existing ecommerce business to the next level, our experts can help you create a seamless and effective online store that will increase sales and drive revenue.",
-    Icon: shopIcon,
-  },
-];
-
-const hireUs = [
-  {
-    id: 1,
-    title: "Experienced & Skilled Resources",
-    desc: "Our team of developers has a deep understanding of the latest technologies and trends in the industry, and they are skilled in building high-quality, feature-rich apps and websites that deliver results.",
-    icon: experience,
-  },
-  {
-    id: 2,
-    title: "Cost-effective & On-time Delivery",
-    desc: "We understand that cost is always a concern, so we work with you to create a solution that fits your budget while delivering maximum value on time.",
-    icon: onTime,
-  },
-  {
-    id: 3,
-    title: "Scalability and Flexibility",
-    desc: "We build our solutions keeping in mind the scalability and flexibility, so that it can be easily adaptable to the changing business needs.",
-    icon: investment,
-  },
-  {
-    id: 4,
-    title: "Quality assurance",
-    desc: "We have strict quality control process in place, to ensure that all our deliverables are of the highest quality.",
-    icon: qualityIcon,
-  },
-];
+import { hireUs, servicesData } from "../Data/constant";
+import { useTitle } from "../CustomHooks/CustomHook";
 
 const Services = () => {
+  useTitle("NerdWareHub Digital Ageny | Services");
+
   return (
     <>
       <section className={`bg-service min-h-screen ${commonStyles.flexCenter}`}>
@@ -176,7 +120,7 @@ const Services = () => {
             </p>
           </header>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8">
-            {services.map((service) => (
+            {servicesData.map((service) => (
               <div
                 className="py-8 px-6 border border-gray-200 rounded-lg space-y-8 smooth hover:border-orange-400 hover:bg-white hover:shadow-md"
                 key={service.id}
