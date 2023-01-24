@@ -1,19 +1,25 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { menu, close, logo } from "../assets/index";
 import { navLinks } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
 import { commonStyles } from "../Styles";
+import { useEffect } from "react";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
 
   const handleToggle = () => {
     setToggle((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    setToggle(false);
+  }, [location.pathname]);
+
   return (
-    <nav className={`navbar ${commonStyles.flexBetween} py-6`}>
+    <nav className={`navbar ${commonStyles.flexBetween}`}>
       <Wrapper className={`${commonStyles.flexBetween}`}>
         <Link to="/" className="w-16">
           {/* <h3 className="text-dimWhite text-lg font-semibold">

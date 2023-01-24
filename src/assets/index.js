@@ -44,7 +44,7 @@ import computer2 from "./computer-2.jpg";
 import experience from "./experience.png";
 import investment from "./investment.png";
 import onTime from "./on-time.png";
-import onlineLearning from "./online-learning.png";
+import qualityIcon from "./quality-icon.png";
 import doubtImg from "./doubt.svg";
 
 // Team Members
@@ -101,7 +101,7 @@ export {
   computer2,
   experience,
   onTime,
-  onlineLearning,
+  qualityIcon,
   investment,
   doubtImg,
 };

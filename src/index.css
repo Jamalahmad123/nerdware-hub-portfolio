@@ -10,7 +10,7 @@
     @apply py-16;
   }
   h1 {
-    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+    @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl;
   }
   h2 {
     @apply text-3xl font-bold md:text-4xl;
@@ -297,9 +297,9 @@
 /* Contact */
 .bg-contact {
   background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      90deg,
+      #1d2671 50%,
+      rgb(255 41 56 / 50%) 90%
     ),
     url("/contact-us.jpg");
 }
@@ -307,9 +307,9 @@
 /* BG Project */
 .bg-project {
   background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)
+      90deg,
+      #1d2671 50%,
+      rgb(255 41 56 / 50%) 90%
     ),
     url("/project-hero.jpg");
 }

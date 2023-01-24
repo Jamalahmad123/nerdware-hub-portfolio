@@ -319,17 +319,17 @@ export const accodianData = [
   {
     id: 1,
     title: "Why do I need a mobile-friendly website?",
-    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+    desc: "In today's digital age, having a mobile-friendly website is crucial for the success of any business. With more and more people using their mobile devices to access the internet, it's important for your website to be optimized for mobile viewing. This means that your website should be designed to be easily navigated and read on smaller screens and with touch-based interactions.",
   },
   {
     id: 2,
     title: "What is the difference between custom and ready-to-use software?",
-    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+    desc: "Custom software and ready-to-use software are two different types of software that are used to solve different problems. Custom software is developed specifically for a particular organization or business, taking into account the unique needs, requirements and constraints of that organization. Custom software is designed and built from scratch, by a team of developers, to meet the specific needs of the organization that is commissioning it. Ready-to-use software, on the other hand, is a pre-built software solution that is available for purchase or subscription, and it is intended to be used by a wide range of organizations or individuals. These software are built to meet the general needs of multiple organizations or individuals and not tailored to specific needs. They are easy to use and can be quickly implemented.",
   },
   {
     id: 3,
     title: "Which Technology or Tools used for Website Designing?",
-    desc: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.",
+    desc: "There are many different technologies and tools that can be used for website designing and development. Some of the most commonly used include: HTML, CSS, and JavaScript: These are the fundamental building blocks of the web. HTML provides the structure and content of the website, CSS is used for styling and layout, and JavaScript is used for dynamic functionality and interactivity. Adobe Photoshop, Sketch, Adobe XD, and Figma are some of the most popular tools used to design and create website layouts. MySQL, SQL Server, MongoDB are some of the popular databases that are used to store and manage website data.",
   },
 ];
 

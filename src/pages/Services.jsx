@@ -12,8 +12,8 @@ import {
   doubtImg,
   experience,
   investment,
-  onlineLearning,
   onTime,
+  qualityIcon,
   seoIcon,
   serviceProject1,
   serviceProject2,
@@ -29,31 +29,31 @@ const services = [
   {
     id: 1,
     title: "App Development",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    desc: "We offer both iOS and Android app development services. Our app developers have deep understanding of mobile app development best practices and can help you create a user-friendly and feature-rich app that will help your business reach new heights.",
     Icon: android,
   },
   {
     id: 2,
     title: "Web Development",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    desc: "From custom website design and development to e-commerce platforms and CMS integration, our team of experts has the skills and experience to build a website that not only looks great but also delivers results. Whether you need a simple brochure website or a complex web application, we have the expertise to create a solution that meets your specific needs.",
     Icon: webIcon,
   },
   {
     id: 3,
     title: "Digital Marketing",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    desc: "We provide a wide range of digital marketing services that include SEO, PPC, Social Media, Email marketing, and more. Our experts will help you to reach your target audience and increase conversions, by creating and implementing effective digital marketing strategies.",
     Icon: seoIcon,
   },
   {
     id: 4,
     title: "Content Writing",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    desc: "Our team of experienced writers can create high-quality content that engages your audience, drives traffic to your website and improves your search engine rankings. From blog posts and articles to product descriptions and website copy, we can help you create compelling and informative content that will help your business stand out.",
     Icon: copywritingIcon,
   },
   {
     id: 5,
     title: "eCommerce Development",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    desc: "We offer a range of ecommerce services that include platform selection, customization, payment gateway integration, and more. Whether you're just getting started or looking to take your existing ecommerce business to the next level, our experts can help you create a seamless and effective online store that will increase sales and drive revenue.",
     Icon: shopIcon,
   },
 ];
@@ -62,26 +62,26 @@ const hireUs = [
   {
     id: 1,
     title: "Experienced & Skilled Resources",
-    desc: "Blueket is a company that specialises in risk management and general safety. We will bring value to your business farm while also ensuring.",
+    desc: "Our team of developers has a deep understanding of the latest technologies and trends in the industry, and they are skilled in building high-quality, feature-rich apps and websites that deliver results.",
     icon: experience,
   },
   {
     id: 2,
     title: "Cost-effective & On-time Delivery",
-    desc: "If you think to have a better outcome with low cost then Blueket is the one. We are offering the best technology solution at an affordable price.",
+    desc: "We understand that cost is always a concern, so we work with you to create a solution that fits your budget while delivering maximum value on time.",
     icon: onTime,
   },
   {
     id: 3,
-    title: "Flexible Pricing & Working Models",
-    desc: "We always ensure that our task is handed over within the given time. Our main priority is customers gratification.",
+    title: "Scalability and Flexibility",
+    desc: "We build our solutions keeping in mind the scalability and flexibility, so that it can be easily adaptable to the changing business needs.",
     icon: investment,
   },
   {
     id: 4,
-    title: "No Expenses on Training & Retaining",
-    desc: "We always ensure that our task is handed over within the given time. Our main priority is customers gratification.",
-    icon: onlineLearning,
+    title: "Quality assurance",
+    desc: "We have strict quality control process in place, to ensure that all our deliverables are of the highest quality.",
+    icon: qualityIcon,
   },
 ];
 
@@ -90,17 +90,20 @@ const Services = () => {
     <>
       <section className={`bg-service min-h-screen ${commonStyles.flexCenter}`}>
         <Wrapper className="flex items-center justify-between">
-          <div className="px-6 py-14 border-2 border-l-0 rounded-tr-[100px] rounded-br-2xl border-white md:flex-2 relative service-content">
-            <span className="-rotate-90 absolute left-[-105px] top-[47%] block text-white text-sm">
-              Web Design & Development
+          <div className="px-6 py-14 border-2 border-l-0 rounded-tr-[100px] rounded-br-2xl border-white md:flex-[0_0_60%] relative service-content">
+            <span className="-rotate-90 absolute left-[-130px] top-[47%] block text-white text-sm">
+              Web and App Development Mastery
             </span>
             <div className="space-y-8">
               <h1 className="text-white uppercase relative">
-                creative web design service
+                Unleash Your Business Potential with{" "}
+                <span className="text-[#ff5723]">Nerdwarehub</span>
               </h1>
-              <p className="text-white">
+              <p className="text-gray-200">
                 Our creative web development firm has been creating apps that
-                are specifically adapted to our clients' needs.
+                are specifically adapted to our clients' needs. Choose
+                Nerdwarehub for the best digital solutions that will take your
+                business to the next level.
               </p>
               <BtnLink styles="rounded-full bg__orange text-white inline-block group">
                 Get a Quote{" "}
@@ -117,17 +120,19 @@ const Services = () => {
               <h5 className={`${commonStyles.scriptHeading} mb-2`}>Overview</h5>
               <h2 className="text-primary">Web Design Agency</h2>
               <p className="mt-8 mb-5 text-gray-700">
-                Design and development of high-quality web and mobile
-                applications that will help you reach new heights in your
-                business.
+                Nerdwarehub is a web design agency that specializes in creating
+                visually stunning and user-friendly websites that help
+                businesses and organizations achieve their goals. We understand
+                that a website is often the first point of contact for potential
+                customers and it's crucial to have a professional and attractive
+                website to make a great first impression.
               </p>
               <p className="text-gray-700">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Design and development of high-quality web and mobile
+                applications that will help you reach new heights in your
+                business. Choose Nerdwarehub for professional and high-quality
+                web design services that will help your business succeed in the
+                digital world.
               </p>
             </div>
             <div className="flex gap-4 relative">
@@ -160,9 +165,15 @@ const Services = () => {
               Our Service
             </h5>
             <h2>
-              Our Mobile App & WebSite <br className="hidden md:block" />{" "}
-              Development Services
+              Services Offered by <br className="hidden md:block" />{" "}
+              <span className="text-[#ff5723]">Nerdwarehub</span>
             </h2>
+            <p className="mt-6 text-gray-700 max-w-2xl">
+              At Nerdwarehub, we specialize in providing expert web and app
+              development, and digital solutions that drive growth and success
+              for businesses and organizations of all sizes. Our services
+              include:
+            </p>
           </header>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8">
             {services.map((service) => (
@@ -225,7 +236,7 @@ const Services = () => {
           <div className="flex-1">
             <h5 className={`${commonStyles.scriptHeading} mb-3`}>Hire Us</h5>
             <h2 className="text-primary">
-              Why Hire The Blueket As Your Mobile App Development Company?
+              Why Hire The Nerdwarehub As Your Digital Solutions Company?
             </h2>
             <div className="mt-10 space-y-6">
               {hireUs.map((item) => (

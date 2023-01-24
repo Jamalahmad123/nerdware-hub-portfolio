@@ -12,19 +12,20 @@ import { Autoplay } from "swiper";
 const WorkPlace = () => {
   return (
     <section className="overflow-hidden relative">
-      <div className="bg__purple w-[400px] h-[400px] rounded-full absolute left-0 right-0 -top-[200px] mx-auto -z-10" />
+      <div className="bg__orange w-[400px] h-[400px] rounded-full absolute left-0 right-0 -top-[200px] mx-auto -z-10" />
       <Wrapper className="space-y-12">
         <div className="space-y-4">
           <h2 className="text-2xl text-white text-center font-bold md:text-3xl">
             Our Workplace Technologies
           </h2>
           <p className="font-normal text-dimWhite text-lg max-w-4xl mx-auto text-center">
-            Our Workplace Technologies Center is focused on working with
-            business leaders to help them maximize their productivity, reduce
-            costs and meet social needs in the 21st century. Our Workplace
-            Technologies Center is focused on working with business leaders to
-            help them maximize their productivity, reduce costs and meet social
-            needs in the 21st century.
+            Our team of experts stays up-to-date with the latest technologies
+            and trends, ensuring that our clients always have access to the most
+            effective and efficient solutions. We pride ourselves on our ability
+            to understand and meet the unique needs of each client, and our
+            commitment to delivering results that exceed expectations. Choose
+            Nerdwarehub for the best digital solutions that will take your
+            business to the next level.
           </p>
         </div>
         {/* slider */}

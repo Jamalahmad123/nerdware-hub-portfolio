@@ -58,33 +58,33 @@ const About = () => {
         </Wrapper>
       </header>
       <section>
-        <Wrapper className="flex flex-col gap-12 items-start lg:flex-row lg:gap-24">
-          <div className="flex-1 w-full space-y-14">
-            <h4 className="text-[1.2rem] leading-[2rem] md:leading-[3rem] font-semibold text-tertiary md:text-[2rem]">
-              To bring inspiration and innovation to every business in the
-              world.
-            </h4>
+        <Wrapper className="flex flex-col gap-12 items-center justify-center md:flex-row lg:gap-24">
+          <div className="flex-1 w-full">
             <figure>
               <img src={missionAbout} alt="mission-about" />
             </figure>
           </div>
           <header className="flex-1 space-y-8">
             <h5 className={`${commonStyles.scriptHeading}`}>Mission</h5>
+            <h4 className="text-[1.2rem] leading-[2rem] md:leading-[3rem] font-semibold text-tertiary md:text-[2rem]">
+              To bring inspiration and innovation to every business in the
+              world.
+            </h4>
             <p className={`${commonStyles.sectionpara}`}>
-              We are a multi-award-winning digital consulting and engineering
-              firm that provides end-to-end Online solutions to enterprises,
-              independent firms.
+              At Nerdwarehub, our mission is to empower businesses and
+              organizations with cutting-edge digital solutions that drive
+              growth and success. We strive to deliver innovative and
+              personalized services that help our clients stay ahead of the
+              competition and achieve their goals. From website development and
+              design to digital marketing and analytics, we are dedicated to
+              providing the expertise and support needed to thrive in today's
+              digital landscape.
             </p>
-            <h4 className="text-[1.2rem] leading-[2rem] md:leading-[2.5rem] font-semibold text-tertiary md:text-[1.6rem]">
+            {/* <h4 className="text-[1.2rem] leading-[2rem] md:leading-[2.5rem] font-semibold text-tertiary md:text-[1.6rem]">
               We are a multi-award-winning digital consulting and engineering
               firm that provides end-to-end software solutions to enterprises,
               independent software vendors, digital agencies, and startups.
-            </h4>
-            <p className={`${commonStyles.sectionpara}`}>
-              Expertise helps Blueket tackle the world's most difficult
-              challenges. Blueket provides digital products for worldwide brands
-              on the web.
-            </p>
+            </h4> */}
           </header>
         </Wrapper>
       </section>
@@ -120,15 +120,18 @@ const About = () => {
               />
             </figure>
             <div className="flex-1">
-              <h2>Mike Chavker</h2>
+              <h2>Adeel Atif</h2>
               <p className="text-orange-600 font-light mt-3 mb-8">
-                Founder & Director of Blueket
+                Founder & Director of NerdwareHub
               </p>
               <p className="text-primary">
-                This approach enables us to deliver effective digital solutions
-                that empower businesses and allow them to scale. We create
-                unparalleled technological experiences for their clients and
-                help them stay ahead of the digital curve.
+                The founder of Nerdwarehub, a digital agency, is a visionary
+                entrepreneur with a passion for technology and a track record of
+                success in the industry. With a background in computer science
+                and a deep understanding of the digital landscape, they founded
+                Nerdwarehub with the goal of providing businesses and
+                organizations with the tools and expertise they need to thrive
+                in today's digital world.
               </p>
               <div className="mt-8 space-y-4">
                 <span className="text-dimGray text-sm">Follow me on</span>

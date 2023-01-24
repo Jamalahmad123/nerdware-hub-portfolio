@@ -12,12 +12,14 @@ const Projects = () => {
           {/* <PageName page="Contact" /> */}
           <h1 className="text-white">
             Some of Our Best Work That <br className="hidden md:block" />{" "}
-            <span className="text-tertiary">We Are Proud of</span>
+            <span className="text-[#ff5723]">We Are Proud of</span>
           </h1>
-          <p className="max-w-xl text-white">
-            Expertise helps Blueket tackle the world's most difficult
-            challenges. Blueket provides digital products for worldwide brands
-            on the web.
+          <p className="max-w-2xl text-gray-200">
+            At Nerdwarehub, we take great pride in our work and are excited to
+            showcase some of our most notable projects. Our portfolio includes a
+            wide range of web and app development, digital marketing and
+            ecommerce solutions that we have delivered to businesses and
+            organizations of all sizes across various industries
           </p>
         </Wrapper>
       </header>

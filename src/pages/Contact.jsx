@@ -9,13 +9,22 @@ const Contact = () => {
 
   return (
     <>
-      <header className={`py-16 bg-center bg-no-repeat bg-cover bg-contact`}>
+      <header
+        className={`py-10 md:py-14 bg-center bg-no-repeat bg-cover bg-contact`}
+      >
         <Wrapper className="space-y-7 md:py-14">
           {/* <PageName page="Contact" /> */}
           <h1 className="text-white">Contact Us</h1>
-          <p className="max-w-xl text-dimWhite">
-            If you have questions, need support, or anything else, please fill
-            the form below. We are here to help you.
+          <p className="max-w-2xl text-gray-200">
+            At Nerdwarehub, we are dedicated to providing our clients with the
+            highest level of service and support. If you have any questions or
+            would like to learn more about our services, please don't hesitate
+            to contact us. You can reach us by phone, email or through our
+            website contact form. Our customer service team is available to
+            answer any questions you may have and provide you with the
+            information you need to make an informed decision about our
+            services. We look forward to hearing from you and helping you
+            achieve your business goals through our expert digital solutions.
           </p>
         </Wrapper>
       </header>
@@ -37,16 +46,16 @@ const Contact = () => {
               </p>
               <div className="flex flex-col gap-1">
                 <a
-                  href="malto:jamal@nerdwarehub.com"
+                  href="mailto:info@nerdwarehub.com"
                   className="text-lg font-semibold text-primary"
                 >
-                  info@nerdware.com
+                  Info@nerdwarehub.com
                 </a>
                 <a
-                  href="malto:jamal@nerdwarehub.com"
+                  href="mailto:careers@nerdwarehub.com"
                   className="text-lg font-semibold text-primary"
                 >
-                  hr@nerdware.com
+                  careers@nerdwarehub.com
                 </a>
               </div>
             </div>
@@ -55,20 +64,20 @@ const Contact = () => {
                 <FaPhoneAlt className="inline-block mr-2" /> Phone/Whatsapp:
               </span>
               <p className="mt-2 mb-5 text-gray-700">
-                Assistance Hours: Mon – Sat, 10 am to 7 pm
+                Assistance Hours: Mon – Sat, 9 am to 6 pm
               </p>
               <div className="flex flex-col gap-1">
                 <a
-                  href="malto:jamal@nerdwarehub.com"
+                  href="tel:+92 317 6440066"
                   className="text-lg font-semibold text-primary"
                 >
-                  555 555 555
+                  +92 317 6440066
                 </a>
                 <a
-                  href="malto:jamal@nerdwarehub.com"
+                  href="tel:+92 340 4619940"
                   className="text-lg font-semibold text-primary"
                 >
-                  555 555 555
+                  +92 340 4619940
                 </a>
               </div>
             </div>
