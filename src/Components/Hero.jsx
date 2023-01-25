@@ -17,10 +17,10 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.95, ease: "easeOut" }}
-      className="py-12 min-h-screen"
+      className="py-12 min-h-screen grid place-items-center"
     >
-      <Wrapper className="flex flex-col-reverse items-center gap-8 md:flex-row md:gap-0">
-        <div className="space-y-6">
+      <Wrapper className="flex flex-col-reverse items-center gap-8 md:flex-row">
+        <div className="flex-1 space-y-6">
           <h1 className="text-white">
             Encourage innovation with trusted <br className="hidden md:block" />
             <span className="text-gradient">Technology Solutions</span>
@@ -37,8 +37,8 @@ const Hero = () => {
             <p>Get Started</p>
           </Button>
         </div>
-        <div className="relative max-w-[500px]">
-          <img src={hero} alt="hero banner" />
+        <div className="flex-1 relative max-w-[500px] max-h-[500px]">
+          <img src={hero} alt="hero banner" className="w-full h-full" />
           <div className="absolute top-0 w-[40%] h-[35%] z-0 pink__gradient" />
           <div className="absolute bottom-40 w-[80%] h-[80%] z-1 rounded-full white__gradient" />
           <div className="absolute right-20 bottom-20 w-[50%] h-[50%] z-0 blue__gradient" />
