@@ -19,13 +19,17 @@ const Nav = () => {
   }, [location.pathname]);
 
   return (
-    <nav className={`navbar ${commonStyles.flexBetween}`}>
+    <nav className={`navbar ${commonStyles.flexBetween} py-4`}>
       <Wrapper className={`${commonStyles.flexBetween}`}>
         <Link to="/" className="w-16">
           {/* <h3 className="text-dimWhite text-lg font-semibold">
             <span className="text-orange-500">{`</>`}</span> NH
           </h3> */}
-          <img src={logo} alt="nerdware hub logo" className="w-full" />
+          <img
+            src={logo}
+            alt="nerdware hub logo"
+            className="w-16 h-8 object-cover"
+          />
         </Link>
         <div className="hidden md:flex items-center gap-6 text-white">
           {navLinks.map((item) => (
