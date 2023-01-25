@@ -53,7 +53,6 @@ import awais from "./Awais-01.jpg";
 import taif from "./Taifui.jpg";
 import jamal from "./jamal.jpg";
 import hamza from "./hamza-01.jpg";
-import adeel from "./adeel.jpeg";
 import team1 from "./team-3.jpg";
 
 export {
@@ -86,7 +85,6 @@ export {
   awais,
   jamal,
   hamza,
-  adeel,
   founderImg,
   aboutHero1,
   aboutHero2,

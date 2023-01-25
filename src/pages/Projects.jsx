@@ -1,17 +1,24 @@
-import { FaLink } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import ProjectsGrid from "../Components/ProjectsGrid";
 import Wrapper from "../Components/shared/Wrapper";
-import { useTitle } from "../CustomHooks/CustomHook";
-import { projects } from "../Data/constant";
+import { pageFromStart, useTitle } from "../CustomHooks/CustomHook";
 
 const Projects = () => {
+  // reset page
+  pageFromStart();
 
-  useTitle("NerdWareHub Digital Ageny | Projects")
+  // Set title
+  useTitle("NerdWareHub Digital Ageny | Projects");
 
   return (
     <>
-      <header className={`py-16 bg-center bg-no-repeat bg-cover bg-project`}>
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.95, ease: "easeOut" }}
+        className={`py-16 bg-center bg-no-repeat bg-cover bg-project`}
+      >
         <Wrapper className="space-y-7 md:py-20">
           {/* <PageName page="Contact" /> */}
           <h1 className="text-white">
@@ -26,7 +33,7 @@ const Projects = () => {
             organizations of all sizes across various industries
           </p>
         </Wrapper>
-      </header>
+      </motion.header>
       <section className="bg-gray-100">
         <Wrapper className="space-y-14">
           <div className="space-y-5">

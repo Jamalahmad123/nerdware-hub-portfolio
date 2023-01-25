@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa";
 import { projects } from "../Data/constant";
+import MyImage from "./shared/MyImage";
 
 const ProjectsGrid = () => {
   return (
@@ -15,8 +16,13 @@ const ProjectsGrid = () => {
             alt="Photo by Claudio Schwarz on Unsplash"
             className="inset-0 h-full w-full object-cover object-center rounded-2xl group-hover:opacity-100 smooth"
           />
+          {/* <MyImage
+            src={project.image}
+            alt={project.title}
+            style="inset-0 h-full w-full object-cover object-center rounded-2xl group-hover:opacity-100 smooth"
+          /> */}
           <div className="absolute left-0 bottom-0 w-full opacity-0 group-hover:opacity-100 smooth flex items-center justify-between">
-            <div className="p-2">
+            <div className="p-4">
               <h3 className="text-white text-2xl">{project.title}</h3>
               <p className="text-white">{project.tech}</p>
             </div>

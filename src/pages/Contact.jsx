@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import { FaEnvelope, FaPhoneAlt, FaUser, FaCommentAlt } from "react-icons/fa";
 import Button from "../Components/shared/Button";
-import PageName from "../Components/shared/PageName";
+// import PageName from "../Components/shared/PageName";
 import Wrapper from "../Components/shared/Wrapper";
 import { pageFromStart, useTitle } from "../CustomHooks/CustomHook";
 
@@ -11,7 +12,11 @@ const Contact = () => {
 
   return (
     <>
-      <header
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.95, ease: "easeOut" }}
         className={`py-10 md:py-14 bg-center bg-no-repeat bg-cover bg-contact`}
       >
         <Wrapper className="space-y-7 md:py-14">
@@ -30,7 +35,7 @@ const Contact = () => {
             achieve your business goals through our expert digital solutions. */}
           </p>
         </Wrapper>
-      </header>
+      </motion.header>
       <section className="bg-gray-100">
         <Wrapper className="grid grid-cols-1 md:grid-cols-2 gap-14">
           <div>

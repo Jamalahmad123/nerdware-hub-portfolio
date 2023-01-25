@@ -1,7 +1,8 @@
 import { services } from "../assets/index";
 import ServicesCards from "./shared/ServicesCards";
-import { homeServices } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
+import MyImage from "./shared/MyImage";
+import { homeServices } from "../Data/constant";
 import { commonStyles } from "../Styles";
 
 const Services = () => {
@@ -24,10 +25,15 @@ const Services = () => {
           </div>
         </div>
         <div className="flex-1 relative">
-          <img
+          {/* <img
             src={services}
             alt="services banner"
             className="w-full h-full z-10"
+          /> */}
+          <MyImage
+            src={services}
+            alt={"Services Banner"}
+            style="w-full h-full z-10"
           />
           {/* <div className="absolute -left-1/2 top-0 w-1/2 h-1/2 z-[3] rounded-full white__gradient" />
           <div className="absolute -left-1/2 bottom-0 w-1/2 h-1/2 z-0 rounded-full pink__gradient" /> */}

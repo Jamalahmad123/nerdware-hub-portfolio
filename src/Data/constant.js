@@ -147,7 +147,6 @@ import {
   asim1,
   jamal,
   hamza,
-  adeel,
   founderImg,
   experience,
   onTime,

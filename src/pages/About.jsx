@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {
@@ -5,67 +6,84 @@ import {
   aboutHero2,
   missionAbout,
   officeView,
-  adeel,
-  jamal,
   team1,
   founderImg,
 } from "../assets";
+import MyImage from "../Components/shared/MyImage";
 import PageName from "../Components/shared/PageName";
 import Statistics from "../Components/shared/Statistics";
 import Wrapper from "../Components/shared/Wrapper";
-import { useTitle } from "../CustomHooks/CustomHook";
-import { team } from "../Data/constant";
+import { pageFromStart, useTitle } from "../CustomHooks/CustomHook";
 import { commonStyles } from "../Styles";
 
 const About = () => {
-
-  useTitle("NerdWareHub Digital Ageny | About-us")
+  pageFromStart();
+  useTitle("NerdWareHub Digital Ageny | About-us");
 
   return (
     <>
       <header className="py-16">
-        <Wrapper className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <header className="">
-            {/* <PageName page="About" /> */}
-            <h1 className="text-tertiary">About Us</h1>
-            <p className={`${commonStyles.sectionpara} mt-8 mb-4`}>
-              Introducing Nerdware Hub, your one-stop-shop for all things
-              digital. We are a newly launched startup with a proven track
-              record of success, having completed 7 projects with 100% client
-              satisfaction. Our team of experts specializes in website and
-              mobile app development, UI/UX design, graphic design, video
-              editing, and animation.
-            </p>
-            <p className={`${commonStyles.sectionpara}`}>
-              We understand the importance of creating a visually stunning and
-              user-friendly digital presence for your business. That's why we
-              take the time to understand your needs and tailor our services to
-              help you achieve your goals.
-            </p>
-          </header>
-          <div className={`${commonStyles.flex} gap-4 self-end`}>
-            <figure className="w-1/2">
-              <img
+        <Wrapper>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.95, ease: "easeOut" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-16"
+          >
+            <header className="">
+              {/* <PageName page="About" /> */}
+              <h1 className="text-tertiary">About Us</h1>
+              <p className={`${commonStyles.sectionpara} mt-8 mb-4`}>
+                Introducing Nerdware Hub, your one-stop-shop for all things
+                digital. We are a newly launched startup with a proven track
+                record of success, having completed 7 projects with 100% client
+                satisfaction. Our team of experts specializes in website and
+                mobile app development, UI/UX design, graphic design, video
+                editing, and animation.
+              </p>
+              <p className={`${commonStyles.sectionpara}`}>
+                We understand the importance of creating a visually stunning and
+                user-friendly digital presence for your business. That's why we
+                take the time to understand your needs and tailor our services
+                to help you achieve your goals.
+              </p>
+            </header>
+            <div className={`${commonStyles.flex} gap-4 self-end`}>
+              <figure className="w-1/2">
+                {/* <img
                 src={aboutHero1}
                 alt="about hero img"
                 className="rounded-xl w-full"
-              />
-            </figure>
-            <figure className="w-1/2">
-              <img
+              /> */}
+                <MyImage
+                  src={aboutHero1}
+                  alt="about hero img"
+                  style="rounded-xl w-full"
+                />
+              </figure>
+              <figure className="w-1/2">
+                {/* <img
                 src={aboutHero2}
                 alt="about hero img"
                 className="rounded-xl w-full"
-              />
-            </figure>
-          </div>
+              /> */}
+                <MyImage
+                  src={aboutHero2}
+                  alt="about hero img"
+                  style="rounded-xl w-full"
+                />
+              </figure>
+            </div>
+          </motion.div>
         </Wrapper>
       </header>
       <section>
         <Wrapper className="flex flex-col gap-12 items-center justify-center md:flex-row lg:gap-24">
           <div className="flex-1 w-full">
             <figure>
-              <img src={missionAbout} alt="mission-about" />
+              {/* <img src={missionAbout} alt="mission-about" /> */}
+              <MyImage src={missionAbout} alt="mission nerdwarehub about" />
             </figure>
           </div>
           <header className="flex-1 space-y-8">
@@ -95,17 +113,22 @@ const About = () => {
       <section>
         <Wrapper>
           <div className="w-full relative">
-            <img
+            {/* <img
               src={officeView}
               alt="office view"
               className="rounded-xl -z-10 w-full"
+            /> */}
+            <MyImage
+              src={officeView}
+              alt="Office view nerdwarehub"
+              style="rounded-xl -z-10 w-full"
             />
             {/* NerdwareHub Stats */}
             <Statistics styles="shadow-xl bg-gray-100 lg:w-[95%] mt-8 p-6 lg:-mt-20" />
           </div>
         </Wrapper>
       </section>
-      <section className="bg-[#f6f7ff]">
+      {/* <section className="bg-[#f6f7ff]">
         <Wrapper className="space-y-12">
           <header className="space-y-6">
             <h2 className="text-primary capitalize">Meet the Team</h2>
@@ -169,7 +192,7 @@ const About = () => {
             </div>
           </div>
         </Wrapper>
-      </section>
+      </section> */}
     </>
   );
 };

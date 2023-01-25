@@ -8,6 +8,7 @@ import "swiper/css";
 import { technologies } from "../Data/constant";
 import Wrapper from "./shared/Wrapper";
 import { Autoplay } from "swiper";
+import MyImage from "./shared/MyImage";
 
 const WorkPlace = () => {
   return (
@@ -33,18 +34,18 @@ const WorkPlace = () => {
           spaceBetween={30}
           grabCursor={true}
           autoplay={{
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           modules={[Autoplay]}
           loop
           breakpoints={{
             300: {
               // width: 576,
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             668: {
               // width: 576,
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
             820: {
               // width: 768,
@@ -70,7 +71,8 @@ const WorkPlace = () => {
               key={index}
               className="flex items-center justify-center"
             >
-              <img src={tech} alt={tech} className="w-[100px] object-cover" />
+              {/* <img src={tech} alt={tech} className="w-[100px] object-cover" /> */}
+              <MyImage src={tech} alt={tech} style="w-[100px] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>

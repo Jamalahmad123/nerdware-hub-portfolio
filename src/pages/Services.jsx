@@ -1,29 +1,22 @@
+import { motion } from "framer-motion";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import BtnLink from "../Components/shared/BtnLink";
 import Wrapper from "../Components/shared/Wrapper";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { commonStyles } from "../Styles";
-import {
-  android,
-  computer1,
-  computer2,
-  copywritingIcon,
-  developer1,
-  developer2,
-  doubtImg,
-  experience,
-  investment,
-  onTime,
-  qualityIcon,
-  seoIcon,
-  serviceProject1,
-  serviceProject2,
-  shopIcon,
-  webIcon,
-} from "../assets";
 import Statistics from "../Components/shared/Statistics";
 import WorkPlace from "../Components/WorkPlace";
 import Cta from "../Components/Cta";
 import AccordianList from "../Components/shared/AccordianList";
+import MyImage from "../Components/shared/MyImage";
+import {
+  computer1,
+  computer2,
+  developer1,
+  developer2,
+  doubtImg,
+  serviceProject1,
+  serviceProject2,
+} from "../assets";
 import { hireUs, servicesData } from "../Data/constant";
 import { useTitle } from "../CustomHooks/CustomHook";
 
@@ -32,7 +25,13 @@ const Services = () => {
 
   return (
     <>
-      <section className={`bg-service min-h-screen ${commonStyles.flexCenter}`}>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.95, ease: "easeOut" }}
+        className={`bg-service min-h-screen ${commonStyles.flexCenter}`}
+      >
         <Wrapper className="flex items-center justify-between">
           <div className="px-6 py-14 border-2 border-l-0 rounded-tr-[100px] rounded-br-2xl border-white md:flex-[0_0_60%] relative service-content">
             <span className="-rotate-90 absolute left-[-130px] top-[47%] block text-white text-sm">
@@ -56,7 +55,7 @@ const Services = () => {
             </div>
           </div>
         </Wrapper>
-      </section>
+      </motion.section>
       <section className="bg-white overflow-hidden py-24">
         <Wrapper>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-between">
@@ -82,17 +81,27 @@ const Services = () => {
             <div className="flex gap-4 relative">
               <div className="bg__shape--square absolute -right-[30px] -top-[40px] w-[6rem] h-[6rem] md:w-[9rem] md:h-[9rem] z-0 opacity-70" />
               <div className="flex-1 shadow-lg z-[10]">
-                <img
+                {/* <img
                   src={serviceProject1}
                   alt="services image 1"
                   className="w-full h-full object-cover"
+                /> */}
+                <MyImage
+                  src={serviceProject1}
+                  alt="services image 1"
+                  style="w-full h-full object-cover"
                 />
               </div>
               <div className="flex-1 shadow-lg z-[10]">
-                <img
+                {/* <img
                   src={serviceProject2}
                   alt="service image 2"
                   className="w-full h-full object-cover"
+                /> */}
+                <MyImage
+                  src={serviceProject2}
+                  alt="services image 2"
+                  style="w-full h-full object-cover"
                 />
               </div>
               <div className="bg__shape--circle absolute -bottom-[30px] -left-[20px] w-[9rem] h-[9rem] z-0 opacity-70" />
@@ -148,31 +157,51 @@ const Services = () => {
           <div className="flex items-center justify-center flex-wrap gap-2 relative flex-1">
             <div className="bg__shape--square absolute -right-[20px] top-4 w-[6rem] h-[6rem] md:w-[9rem] md:h-[9rem] z-0 opacity-70" />
             <div className="flex-[0_0_auto] w-1/3 shadow-lg">
-              <img
+              {/* <img
                 src={developer1}
                 alt="developer image"
                 className="w-full h-full object-fill rounded-lg"
+              /> */}
+              <MyImage
+                src={developer1}
+                alt="developer image"
+                style="w-full h-full object-fill rounded-lg"
               />
             </div>
             <div className="flex-[0_0_auto] w-1/2 self-end z-10 shadow-lg">
-              <img
+              {/* <img
                 src={developer2}
                 alt="developer image"
                 className="w-full h-full object-fill rounded-lg"
+              /> */}
+              <MyImage
+                src={developer2}
+                alt="developer image"
+                style="w-full h-full object-fill rounded-lg"
               />
             </div>
             <div className="flex-[0_0_auto] w-1/2 z-10 shadow-lg">
-              <img
+              {/* <img
                 src={computer1}
                 alt="computer image"
                 className="w-full h-full object-fill rounded-lg"
+              /> */}
+              <MyImage
+                src={computer1}
+                alt="computer image"
+                style="w-full h-full object-fill rounded-lg"
               />
             </div>
             <div className="flex-[0_0_auto] w-1/3 self-start shadow-lg">
-              <img
+              {/* <img
                 src={computer2}
                 alt="computer image"
                 className="w-full h-full object-fill rounded-lg"
+              /> */}
+              <MyImage
+                src={computer2}
+                alt="computer image"
+                style="w-full h-full object-fill rounded-lg"
               />
             </div>
             <div className="bg__shape--circle absolute -bottom-[30px] -left-[50px] w-[9rem] h-[9rem] z-0 opacity-70" />
@@ -180,7 +209,8 @@ const Services = () => {
           <div className="flex-1">
             <h5 className={`${commonStyles.scriptHeading} mb-3`}>Hire Us</h5>
             <h2 className="text-primary">
-              Why Hire The Nerdwarehub As Your Digital Solutions Company?
+              {/* Why Hire The Nerdwarehub As Your Digital Solutions Company? */}
+              Why Nerdwarehub
             </h2>
             <div className="mt-10 space-y-6">
               {hireUs.map((item) => (
@@ -206,7 +236,12 @@ const Services = () => {
       <section className="bg-[#fff]">
         <Wrapper className="flex flex-col md:flex-row items-center justify-between gap-14">
           <div className="flex-1 w-full">
-            <img src={doubtImg} alt="have a question banner" />
+            {/* <img src={doubtImg} alt="have a question banner" /> */}
+            <MyImage
+              src={doubtImg}
+              alt="have a question banner"
+              style="w-full h-full object-fill rounded-lg"
+            />
           </div>
           <div className="flex-1">
             <div>

@@ -5,6 +5,7 @@ import { projects } from "../Data/constant";
 import Button from "./shared/Button";
 import { Link } from "react-router-dom";
 import Wrapper from "./shared/Wrapper";
+import MyImage from "./shared/MyImage";
 
 const Projects = () => {
   const [current, setCurrent] = useState(0);
@@ -60,10 +61,10 @@ const Projects = () => {
                 stiffness: 260,
                 damping: 20,
               }}
-              className={`w-full h-full flex flex-col items-center lg:flex-row bg-black-gradient-2 gap-6 p-8 absolute overflow-hidden`}
+              className={`w-full h-full flex flex-col items-center justify-between lg:flex-row bg-black-gradient-2 gap-6 p-8 absolute overflow-hidden`}
               key={project.id}
             >
-              <div className="mb-8 lg:flex-1 space-y-4 lg:mb-0">
+              <div className="mb-8 space-y-4 lg:mb-0">
                 <h2 className="text-3xl font-bold text-white md:text-4xl">
                   {project.title}
                 </h2>
@@ -77,11 +78,18 @@ const Projects = () => {
                   </a>
                 </Button>
               </div>
-              <div className="h-[200px] w-full md:h-[400px] lg:h-auto lg:flex-2">
-                <img
+              <div className="w-full flex-2 mx-auto">
+                {/* <img
                   src={project.image}
-                  alt=""
+                  alt={project.title}
                   className="w-full h-full object-cover rounded-lg lg:h-[400px]"
+                /> */}
+                <MyImage
+                  src={project.image}
+                  alt={project.title}
+                  style={
+                    "w-full object-cover rounded-lg h-[200px] md:h-[400px]"
+                  }
                 />
               </div>
             </motion.div>
