@@ -22,6 +22,7 @@ function App() {
       <Router>
         <Nav />
         {/* <Suspense fallback={<div className="min-h-screen" />}> */}
+        {/*  */}
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<Home />} />
