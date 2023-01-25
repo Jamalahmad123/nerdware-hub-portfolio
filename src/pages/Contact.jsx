@@ -21,8 +21,22 @@ const Contact = () => {
       >
         <Wrapper className="space-y-7 md:py-14">
           {/* <PageName page="Contact" /> */}
-          <h1 className="text-white">Contact Us</h1>
-          <p className="max-w-2xl text-gray-200">
+          <div className="overflow-hidden">
+            <motion.h1
+              animate={{ y: "0" }}
+              initial={{ y: "100%" }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="text-white"
+            >
+              Contact Us
+            </motion.h1>
+          </div>
+          <motion.p
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="max-w-2xl text-gray-200"
+          >
             At Nerdwarehub, we are dedicated to providing our clients with the
             highest level of service and support. If you have any questions or
             would like to learn more about our services, please don't hesitate
@@ -33,7 +47,7 @@ const Contact = () => {
             information you need to make an informed decision about our
             services. We look forward to hearing from you and helping you
             achieve your business goals through our expert digital solutions. */}
-          </p>
+          </motion.p>
         </Wrapper>
       </motion.header>
       <section className="bg-gray-100">

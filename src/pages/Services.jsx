@@ -37,21 +37,34 @@ const Services = () => {
             <span className="-rotate-90 absolute left-[-130px] top-[47%] block text-white text-sm">
               Web and App Development Mastery
             </span>
-            <div className="space-y-8">
-              <h1 className="text-white uppercase relative">
-                Unleash Your Business Potential with{" "}
-                <span className="text-[#ff5723]">Nerdwarehub</span>
-              </h1>
-              <p className="text-gray-200">
-                Our creative web development firm has been creating apps that
-                are specifically adapted to our clients' needs. Choose
-                Nerdwarehub for the best digital solutions that will take your
-                business to the next level.
-              </p>
-              <BtnLink styles="rounded-full bg__orange text-white inline-block group">
-                Get a Quote{" "}
-                <FaLongArrowAltRight className="inline-block ml-2 group-hover:ml-4 smooth" />
-              </BtnLink>
+            <div>
+              <div className="overflow-hidden relative service__heading mb-8">
+                <motion.h1
+                  animate={{ y: "0" }}
+                  initial={{ y: "100%" }}
+                  transition={{ delay: 0.2, duration: 0.7 }}
+                  className="text-white uppercase"
+                >
+                  Unleash Your Business Potential with{" "}
+                  <span className="text-[#ff5723]">Nerdwarehub</span>
+                </motion.h1>
+              </div>
+              <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ delay: 0.4, duration: 0.7 }}
+              >
+                <p className="text-gray-200 mb-6">
+                  Our creative web development firm has been creating apps that
+                  are specifically adapted to our clients' needs. Choose
+                  Nerdwarehub for the best digital solutions that will take your
+                  business to the next level.
+                </p>
+                <BtnLink styles="rounded-full bg__orange text-white inline-block group">
+                  Get a Quote{" "}
+                  <FaLongArrowAltRight className="inline-block ml-2 group-hover:ml-4 smooth" />
+                </BtnLink>
+              </motion.div>
             </div>
           </div>
         </Wrapper>

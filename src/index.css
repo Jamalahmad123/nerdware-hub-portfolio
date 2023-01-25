@@ -27,10 +27,6 @@
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
-/* *{
-  scroll-behavior: smooth;
-} */
-
 /* Links hover Effect */
 .nav-link {
   box-shadow: inset 0 0 0 0 #33bbcf;
@@ -345,7 +341,7 @@
   background-color: #fff;
 }
 
-.service-content h1::after {
+.service-content .service__heading::after {
   content: "";
   background-color: #fff;
   position: absolute;

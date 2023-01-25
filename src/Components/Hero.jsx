@@ -20,22 +20,32 @@ const Hero = () => {
       className="py-12 min-h-screen grid place-items-center"
     >
       <Wrapper className="flex flex-col-reverse items-center gap-8 md:flex-row">
-        <div className="flex-1 space-y-6">
-          <h1 className="text-white">
-            Encourage innovation with trusted <br className="hidden md:block" />
-            <span className="text-gradient">Technology Solutions</span>
-          </h1>
-          <p className={`${commonStyles.sectionpara}`}>
-            Our company, Nerdware Hub, is a leader in the digital industry. We
-            specialize in developing cutting-edge software solutions for a
-            variety of clients across various sectors.
-          </p>
-          <Button
-            styles="bg-blue-gradient rounded-md"
-            onClick={() => scrollToView("contact")}
+        <div className="flex-1 overflow-hidden">
+          {/*  */}
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <p>Get Started</p>
-          </Button>
+            <div className="overflow-hidden">
+              <h1 className="text-white">
+                Encourage innovation with trusted{" "}
+                <br className="hidden md:block" />
+                <span className="text-gradient">Technology Solutions</span>
+              </h1>
+            </div>
+            <p className={`${commonStyles.sectionpara} mb-6 mt-8`}>
+              Our company, Nerdware Hub, is a leader in the digital industry. We
+              specialize in developing cutting-edge software solutions for a
+              variety of clients across various sectors.
+            </p>
+            <Button
+              styles="bg-blue-gradient rounded-md"
+              onClick={() => scrollToView("contact")}
+            >
+              <p>Get Started</p>
+            </Button>
+          </motion.div>
         </div>
         <div className="flex-1 relative max-w-[500px] max-h-[500px]">
           <img src={hero} alt="hero banner" className="w-full h-full" />

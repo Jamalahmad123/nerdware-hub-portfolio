@@ -33,21 +33,36 @@ const About = () => {
           >
             <header className="">
               {/* <PageName page="About" /> */}
-              <h1 className="text-tertiary">About Us</h1>
-              <p className={`${commonStyles.sectionpara} mt-8 mb-4`}>
-                Introducing Nerdware Hub, your one-stop-shop for all things
-                digital. We are a newly launched startup with a proven track
-                record of success, having completed 7 projects with 100% client
-                satisfaction. Our team of experts specializes in website and
-                mobile app development, UI/UX design, graphic design, video
-                editing, and animation.
-              </p>
-              <p className={`${commonStyles.sectionpara}`}>
-                We understand the importance of creating a visually stunning and
-                user-friendly digital presence for your business. That's why we
-                take the time to understand your needs and tailor our services
-                to help you achieve your goals.
-              </p>
+              <div className="overflow-hidden">
+                <motion.h1
+                  animate={{ y: "0" }}
+                  initial={{ y: "100%" }}
+                  transition={{ delay: 0.2, duration: 0.7 }}
+                  className="text-tertiary"
+                >
+                  About Us
+                </motion.h1>
+              </div>
+              <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ delay: 0.4, duration: 0.7 }}
+              >
+                <p className={`${commonStyles.sectionpara} mt-8 mb-4`}>
+                  Introducing Nerdware Hub, your one-stop-shop for all things
+                  digital. We are a newly launched startup with a proven track
+                  record of success, having completed 7 projects with 100%
+                  client satisfaction. Our team of experts specializes in
+                  website and mobile app development, UI/UX design, graphic
+                  design, video editing, and animation.
+                </p>
+                <p className={`${commonStyles.sectionpara}`}>
+                  We understand the importance of creating a visually stunning
+                  and user-friendly digital presence for your business. That's
+                  why we take the time to understand your needs and tailor our
+                  services to help you achieve your goals.
+                </p>
+              </motion.div>
             </header>
             <div className={`${commonStyles.flex} gap-4 self-end`}>
               <figure className="w-1/2">
